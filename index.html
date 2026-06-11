@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wab's World</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WabsWorld</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
-    <h1>Wab's World</h1>
-    <p>Is this thing on?</p>
+
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">WabsWorld</a>
+
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#side-quests">Side Quests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero container">
+      <p class="ticker">
+        WABSWORLD ★ WABSWORLD ★ WABSWORLD ★ WABSWORLD ★ WABSWORLD
+      </p>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Personal directory / web lab / ongoing archive</p>
+          <h1>Things Wab is currently making.</h1>
+
+          <p class="hero-text">
+            Websites, class projects, photos, food ideas, unfinished experiments,
+            and whatever else gets added to the pile.
+          </p>
+        </div>
+
+        <aside class="status-card">
+          <p class="card-label">Current status</p>
+          <h2>Under construction</h2>
+          <p>
+            This site is being built in public. Some links will be polished.
+            Some will be weird. That is the point.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="directory-section container">
+      <div class="section-heading">
+        <p class="eyebrow">Main Directory</p>
+        <h2>Projects</h2>
+      </div>
+
+      <div class="directory-grid">
+
+        <article class="directory-card">
+          <span class="tag">Client Work</span>
+          <h3>Chrysalis Massage</h3>
+          <p>Medical massage website concept with dark gold visual direction.</p>
+          <a href="#">View Project</a>
+        </article>
+
+        <article class="directory-card">
+          <span class="tag">Restaurant Site</span>
+          <h3>Acorn Kitchen</h3>
+          <p>Quirky restaurant website for a tiny food spot with daily-changing menus.</p>
+          <a href="#">View Project</a>
+        </article>
+
+        <article class="directory-card">
+          <span class="tag">Public Humanities</span>
+          <h3>Kin by Chiko</h3>
+          <p>Three homepage concepts for a story-centered public humanities studio.</p>
+          <a href="#">View Project</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="classes" class="directory-section container">
+      <div class="section-heading">
+        <p class="eyebrow">School Archive</p>
+        <h2>Class Work</h2>
+      </div>
+
+      <div class="lesson-list">
+
+        <article class="lesson-card">
+          <h3>CIT 180</h3>
+          <ul>
+            <li><a href="#">Assignment Summary Page</a></li>
+            <li><a href="#">Final Project</a></li>
+            <li><a href="#">HTML / CSS Experiments</a></li>
+          </ul>
+        </article>
+
+        <article class="lesson-card">
+          <h3>JavaScript</h3>
+          <ul>
+            <li><a href="#">AeroOS Arcade</a></li>
+            <li><a href="#">Reaction Game</a></li>
+            <li><a href="#">Scene Builder</a></li>
+          </ul>
+        </article>
+
+        <article class="lesson-card">
+          <h3>C# / Backend</h3>
+          <ul>
+            <li><a href="#">Coffee Shop App</a></li>
+            <li><a href="#">Razor Pages Notes</a></li>
+            <li><a href="#">SQL Practice</a></li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="side-quests" class="directory-section container">
+      <div class="section-heading">
+        <p class="eyebrow">Other Tabs Open</p>
+        <h2>Side Quests</h2>
+      </div>
+
+      <div class="sidequest-board">
+
+        <a href="#" class="sidequest-link">Photography</a>
+        <a href="#" class="sidequest-link">Restaurant Experiments</a>
+        <a href="#" class="sidequest-link">Furniture Builds</a>
+        <a href="#" class="sidequest-link">Writing Notes</a>
+        <a href="#" class="sidequest-link">Design Tests</a>
+        <a href="#" class="sidequest-link">Random Internet Stuff</a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Wabanung Bussey · WabsWorld · Last updated 2026</p>
+  </footer>
+
 </body>
 </html>

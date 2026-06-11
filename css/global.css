@@ -1,0 +1,119 @@
+:root {
+  --bg: #10131f;
+  --bg-soft: #171b2b;
+  --card: #f6ead2;
+  --card-dark: #20263a;
+  --ink: #fff3dc;
+  --muted: #bfc3d4;
+  --black: #101010;
+
+  --orange: #df7b35;
+  --pink: #d84e9f;
+  --cyan: #39c7c9;
+  --yellow: #f2c94c;
+  --green: #86d46b;
+
+  --border: 2px solid rgba(255, 243, 220, 0.18);
+  --shadow: 8px 8px 0 rgba(0, 0, 0, 0.35);
+
+  --heading-font: "Syne", sans-serif;
+  --body-font: "Space Grotesk", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(216, 78, 159, 0.22), transparent 18rem),
+    radial-gradient(circle at 85% 20%, rgba(57, 199, 201, 0.18), transparent 20rem),
+    radial-gradient(circle at 70% 80%, rgba(223, 123, 53, 0.18), transparent 22rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(16, 19, 31, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: var(--border);
+}
+
+.navbar {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo {
+  color: var(--yellow);
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--cyan);
+}
+
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: var(--border);
+}
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
