@@ -1,227 +1,193 @@
-.hero {
-  padding: 5rem 0 3rem;
-}
-
-.ticker {
-  margin: 0 0 2rem;
-  padding: 0.75rem 1rem;
+.matrix-header {
+  position: relative;
+  height: 70px;
   overflow: hidden;
-
-  border: var(--border);
-  background: var(--card);
-  color: var(--black);
-
-  font-family: var(--heading-font);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  box-shadow: var(--shadow);
+  border-top: 2px solid var(--green);
+  border-bottom: 2px solid var(--green);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(32, 255, 0, 0.55) 0 2px,
+      transparent 2px 6px
+    ),
+    #000;
+  box-shadow: 0 0 25px rgba(32, 255, 0, 0.5);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 2rem;
-  align-items: stretch;
-}
-
-.eyebrow {
-  margin: 0 0 0.85rem;
-  color: var(--cyan);
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-h1,
-h2,
-h3 {
-  font-family: var(--heading-font);
-  line-height: 1;
-}
-
-h1 {
-  max-width: 850px;
+.matrix-header p {
+  position: relative;
+  z-index: 2;
   margin: 0;
-  font-size: clamp(3.5rem, 11vw, 8rem);
+  padding-top: 28px;
+  white-space: nowrap;
+  color: var(--green);
+  font-family: monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.45rem;
+  text-shadow: 0 0 12px var(--green);
+  animation: crawl 24s linear infinite;
+}
+
+@keyframes crawl {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-35%);
+  }
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(32, 255, 0, 0.15),
+      transparent
+    );
+  animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.home-layout {
+  min-height: calc(100vh - 130px);
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  gap: 2rem;
+  background:
+    radial-gradient(circle at center, rgba(32, 255, 0, 0.08), transparent 30rem),
+    linear-gradient(90deg, rgba(32,255,0,0.55), transparent 12%, transparent 88%, rgba(32,255,0,0.55));
+}
+
+.assignment-column {
+  padding: 2rem;
+  background: rgba(0, 35, 0, 0.75);
+}
+
+.assignment-column h2 {
+  margin-bottom: 2rem;
+  color: var(--white);
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.assignment-column section {
+  margin-bottom: 1.35rem;
+}
+
+.assignment-column h3 {
+  margin: 0 0 0.25rem;
+  color: var(--white);
+  font-size: 1.25rem;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.assignment-column a {
+  font-size: 0.95rem;
+}
+
+.assignment-column a::first-letter {
+  color: var(--green);
+}
+
+.right-column {
+  text-align: right;
+}
+
+.center-stage {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.logo-box {
+  width: min(600px, 90%);
+  height: 200px;
+  padding: 2.5rem;
+  border: 4px dashed var(--green);
+  box-shadow:
+    0 0 18px rgba(32, 255, 0, 0.6),
+    inset 0 0 25px rgba(32, 255, 0, 0.18);
+}
+
+.logo-box h1 {
+  margin: 0;
+  color: var(--green);
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 0.75;
+  letter-spacing: 0.15em;
+  text-shadow:
+    0 0 10px var(--green),
+    3px 3px 0 #000;
+}
+
+.logo-box h1 span {
+  color: var(--white);
+  font-style: italic;
   letter-spacing: -0.08em;
 }
 
-.hero-text {
-  max-width: 650px;
-  margin: 1.5rem 0 0;
-  color: var(--muted);
-  font-size: 1.15rem;
+.terminal-text {
+  margin-top: 2rem;
+  color: var(--green-soft);
+  font-family: monospace;
+  letter-spacing: 0.08em;
 }
 
-.status-card,
-.directory-card,
-.lesson-card {
-  border: var(--border);
-  box-shadow: var(--shadow);
-  border-radius: 18px;
-}
-
-.status-card {
-  padding: 1.5rem;
-  background: var(--card);
-  color: var(--black);
-  transform: rotate(1deg);
-}
-
-.card-label,
-.tag {
-  display: inline-block;
-  margin: 0 0 1rem;
-  padding: 0.3rem 0.65rem;
-  border: 2px solid currentColor;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.status-card h2 {
-  margin: 0 0 1rem;
-  font-size: 2rem;
-}
-
-.status-card p {
-  margin: 0;
-}
-
-.directory-section {
-  padding: 4rem 0;
-}
-
-.section-heading {
-  margin-bottom: 2rem;
-}
-
-.section-heading h2 {
-  margin: 0;
-  font-size: clamp(2.4rem, 7vw, 5rem);
-}
-
-.directory-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.directory-card {
-  padding: 1.5rem;
-  background: var(--card-dark);
-}
-
-.directory-card:nth-child(1) {
-  border-color: var(--pink);
-}
-
-.directory-card:nth-child(2) {
-  border-color: var(--orange);
-}
-
-.directory-card:nth-child(3) {
-  border-color: var(--cyan);
-}
-
-.directory-card h3 {
-  margin: 0 0 0.75rem;
-  font-size: 1.6rem;
-}
-
-.directory-card p {
-  color: var(--muted);
-}
-
-.directory-card a,
-.lesson-card a,
-.sidequest-link {
-  font-weight: 800;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 4px;
-}
-
-.lesson-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.lesson-card {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 1rem;
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.lesson-card h3 {
-  margin: 0;
-  color: var(--yellow);
-  font-size: 1.8rem;
-}
-
-.lesson-card ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.25rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sidequest-board {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.sidequest-link {
-  padding: 1rem 1.25rem;
-  border: var(--border);
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--black);
-  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.28);
-  text-decoration: none;
-}
-
-.sidequest-link:nth-child(even) {
-  background: var(--cyan);
-}
-
-.sidequest-link:nth-child(3n) {
-  background: var(--orange);
-}
+/* RESPONSIVE */
 
 @media screen and (max-width: 900px) {
-  .hero-grid,
-  .directory-grid,
-  .lesson-card {
+  .home-layout {
     grid-template-columns: 1fr;
   }
 
-  .status-card {
-    transform: none;
+  .assignment-column,
+  .right-column {
+    text-align: left;
+  }
+
+  .left-column {
+    order: 2;
+  }
+
+  .center-stage {
+    order: 1;
+    min-height: 420px;
+  }
+
+  .right-column {
+    order: 3;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .hero {
-    padding-top: 3rem;
+  .matrix-header p {
+    font-size: 0.85rem;
+    letter-spacing: 0.25rem;
   }
 
-  h1 {
-    font-size: clamp(3rem, 18vw, 5rem);
+  .assignment-column {
+    padding: 1.5rem;
   }
 
-  .directory-section {
-    padding: 3rem 0;
+  .logo-box {
+    padding: 1.5rem;
   }
 
-  .lesson-card ul {
-    flex-direction: column;
+  .logo-box h1 {
+    font-size: 3.2rem;
   }
 }
