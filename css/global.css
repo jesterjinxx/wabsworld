@@ -24,7 +24,22 @@ body {
   color: var(--text);
   font-family: "Times New Roman", serif;
 }
+body::before {
+  content: "";
 
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: -1;
+
+  opacity: .15;
+  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Cpath d='M25 18v14M18 25h14' stroke='%2300ff88' stroke-width='1'/%3E%3C/svg%3E");
+
+  background-repeat: repeat;
+  filter: drop-shadow(0 0 3px rgba(0,255,136,.4));
+}
 a {
   color: var(--green);
   text-decoration: none;
