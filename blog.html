@@ -1,63 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+---
+layout: default
+title: Blog
+---
 
-  <title>Blog | WabsWorld</title>
-
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/blog.css" />
-</head>
-
-<body>
-  <header class="site-header">
-    <a href="index.html" class="logo">WabsWorld</a>
-
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-
-  <main class="page-shell">
-    <section class="hero small-hero">
-      <p class="eyebrow">archive</p>
-      <h1>Blog</h1>
-      <p>
-        Posts, notes, logs, scraps, and unfinished thoughts.
-      </p>
-    </section>
-
-    <section class="post-list">
-     
-
-  <article class="post-card">
-    <p class="post-meta">June 11, 2026 · Web Dev</p>
-
-    <h3>
-      <a href="posts/building-wabsworld.html">
-        Building WabsWorld
-      </a>
-    </h3>
+<main class="page-shell">
+  <section class="hero small-hero">
+    <p class="eyebrow">Archive</p>
+    <h1>Blog.</h1>
 
     <p>
-      Rebuilding my personal website into a weird internet journal.
+      Posts, notes, projects, photos, internet scraps, and whatever else ends up here.
     </p>
-  </article>
+  </section>
 
-</section>
-  </main>
-  <footer class="site-footer">
-  <p>
-    WabsWorld © 2026
-  </p>
+  <section class="post-list">
+    <h2>All Posts</h2>
 
-  <p>
-    Built with HTML & CSS.
-  </p>
-</footer>
-</body>
-</html>
+    {% for post in site.posts %}
+      <article class="post-card">
+        {% if post.thumbnail %}
+          <a class="post-thumb" href="{{ post.url }}">
+            <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
+          </a>
+        {% endif %}
+
+        <div class="post-card-content">
+          <p class="post-meta">
+            {{ post.date | date: "%B %-d, %Y" }} · {{ post.category }}
+          </p>
+
+          <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+
+          <p>{{ post.excerpt }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+</main>

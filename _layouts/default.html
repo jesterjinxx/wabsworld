@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ page.title | default: site.title }}</title>
+
+    <link rel="stylesheet" href="{{ '/css/global.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/blog.css' | relative_url }}">
+</head>
+
+<body>
+    <header class="site-header">
+  <a href="{{ '/' | relative_url }}" class="logo">WabsWorld +</a>
+
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ '/projects.html' | relative_url }}">Projects</a>
+    <a href="{{ '/about.html' | relative_url }}">About</a>
+  </nav>
+</header>
+
+    {{ content }}
+
+    <footer class="site-footer">
+        <p>
+            WabsWorld © 2026
+        </p>
+    </footer>
+</body>
+
+</html>

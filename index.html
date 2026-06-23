@@ -1,75 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: WabsWorld
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<main class="page-shell">
+  <section class="hero">
+    <p class="eyebrow">Status: Active</p>
 
-  <title>WabsWorld</title>
+    <h1>Welcome to WabsWorld.</h1>
 
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/blog.css" />
-</head>
+    <p>
+      A messy little corner of the internet for projects, notes, photos,
+      experiments, thoughts, and whatever else feels worth saving.
+    </p>
+  </section>
 
-<body>
-  <header class="site-header">
-    <a href="index.html" class="logo">WabsWorld +</a>
+  <section class="post-list">
+    <h2>Latest Posts</h2>
 
-    <nav class="site-nav">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-
-  <main class="page-shell">
-    <section class="hero">
-      <p class="eyebrow">Status: Active</p>
-      <h1>Welcome to WabsWorld.</h1>
-      <p>
-        A messy little corner of the internet for projects, notes, photos,
-        experiments, thoughts, and whatever else feels worth saving.
-      </p>
-    </section>
-
-    <section class="post-list">
-      <h2>Latest Posts</h2>
+    {% for post in site.posts limit:2 %}
       <article class="post-card">
-        <p class="post-meta">June 11, 2026 · Web Dev</p>
-
-        <h3>
-          <a href="posts/making-a-scene.html">
-            Making a Scene
+        {% if post.thumbnail %}
+          <a class="post-thumb" href="{{ post.url }}">
+            <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
           </a>
-        </h3>
+        {% endif %}
 
-        <p>
-          Cobe Lund brings house music to Traverse City.
-        </p>
+        <div class="post-card-content">
+          <p class="post-meta">
+            {{ post.date | date: "%B %-d, %Y" }} · {{ post.category }}
+          </p>
+
+          <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+
+          <p>{{ post.excerpt }}</p>
+        </div>
       </article>
-      <article class="post-card">
-        <p class="post-meta">June 11, 2026 · Web Dev</p>
-
-        <h3>
-          <a href="posts/building-wabsworld.html">
-            Building WabsWorld
-          </a>
-        </h3>
-
-        <p>
-          Rebuilding my personal website into a weird internet journal.
-        </p>
-      </article>
-
-    </section>
-  </main>
-  <footer class="site-footer">
-  <p>
-    WabsWorld © 2026
-  </p>
-
-</footer>
-</body>
-
-</html>
+    {% endfor %}
+  </section>
+</main>
