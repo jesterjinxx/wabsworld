@@ -6,7 +6,7 @@ category: Category
 tags:
   - tag one
   - tag two
-thumbnail: /media/featured-image.jpg
+thumbnail: /images/background.png
 excerpt: "One sentence summary for the homepage and blog page."
 ---
 
@@ -16,11 +16,8 @@ excerpt: "One sentence summary for the homepage and blog page."
   {% endfor %}
 </div>
 
-<h3>Subtitle Goes Here</h3>
+## Subtitle Goes Here
 
-<p class="post-intro">
-  One sentence intro or thesis for the post.
-</p>
 
 Start writing here. This can be normal Markdown text.
 
