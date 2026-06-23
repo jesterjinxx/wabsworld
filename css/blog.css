@@ -83,7 +83,7 @@
 }
 
 .post h2 {
-  margin-top: 3rem;
+  margin-top: 2rem;
   color: var(--green);
 }
 .post h3 {
@@ -93,9 +93,15 @@
 }
 
 .post p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
   line-height: 1.3;
+  padding: 0.5rem 0;
 }
-
+br {
+  margin: 0.5rem 0;
+}
 .post-intro {
   font-size: 1.2rem;
   color: var(--green);
@@ -355,8 +361,8 @@ blockquote {
   }
 
   .author-photo {
-    width: 165px;
-    height: 165px;
+    width: 100%;
+    height: auto;
   }
 
   .author-info {
