@@ -9,6 +9,30 @@
 
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/blog.css">
+    
+
+
+
+<link rel="canonical" href="http://localhost:4000/web%20dev/2026/06/11/building-wabsworld.html">
+
+<meta name="description" content="Why I built this platform">
+
+<meta property="og:site_name" content="WabsWorld">
+<meta property="og:title" content="Building WabsWorld">
+<meta property="og:description" content="Why I built this platform">
+<meta property="og:url" content="http://localhost:4000/web%20dev/2026/06/11/building-wabsworld.html">
+<meta property="og:image" content="http://localhost:4000/images/background.png">
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-06-11T00:00:00-04:00">
+  <meta property="article:section" content="Web Dev">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building WabsWorld">
+<meta name="twitter:description" content="Why I built this platform">
+<meta name="twitter:image" content="http://localhost:4000/images/background.png">
 </head>
 
 <body>
@@ -128,6 +152,60 @@
   </div>
 </section>
 
+
+    
+
+
+<section class="post-share">
+  <h2 class="share-heading">Share this post</h2>
+
+  <div class="share-links">
+    <a
+      class="share-link"
+      href="https://twitter.com/intent/tweet?text=Building+WabsWorld+%7C+WabsWorld&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fweb%2520dev%2F2026%2F06%2F11%2Fbuilding-wabsworld.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      X / Twitter
+    </a>
+
+    <a
+      class="share-link"
+      href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fweb%2520dev%2F2026%2F06%2F11%2Fbuilding-wabsworld.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+
+    <a
+      class="share-link"
+      href="mailto:?subject=Building+WabsWorld+%7C+WabsWorld&amp;body=http%3A%2F%2Flocalhost%3A4000%2Fweb%2520dev%2F2026%2F06%2F11%2Fbuilding-wabsworld.html"
+    >
+      Email
+    </a>
+
+    <button class="share-link copy-link" type="button" data-link="http://localhost:4000/web%20dev/2026/06/11/building-wabsworld.html">
+      Copy Link
+    </button>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".copy-link").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.link);
+        button.textContent = "Copied";
+        setTimeout(() => {
+          button.textContent = "Copy Link";
+        }, 1600);
+      } catch (error) {
+        button.textContent = "Copy failed";
+      }
+    });
+  });
+</script>
   </article>
 </main>
 

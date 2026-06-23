@@ -1,0 +1,53 @@
+{% assign share_url = page.url | absolute_url %}
+{% assign share_title = page.title | append: " | WabsWorld" %}
+
+<section class="post-share">
+  <h2 class="share-heading">Share this post</h2>
+
+  <div class="share-links">
+    <a
+      class="share-link"
+      href="https://twitter.com/intent/tweet?text={{ share_title | url_encode }}&amp;url={{ share_url | url_encode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      X / Twitter
+    </a>
+
+    <a
+      class="share-link"
+      href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | url_encode }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Facebook
+    </a>
+
+    <a
+      class="share-link"
+      href="mailto:?subject={{ share_title | url_encode }}&amp;body={{ share_url | url_encode }}"
+    >
+      Email
+    </a>
+
+    <button class="share-link copy-link" type="button" data-link="{{ share_url }}">
+      Copy Link
+    </button>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".copy-link").forEach((button) => {
+    button.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(button.dataset.link);
+        button.textContent = "Copied";
+        setTimeout(() => {
+          button.textContent = "Copy Link";
+        }, 1600);
+      } catch (error) {
+        button.textContent = "Copy failed";
+      }
+    });
+  });
+</script>

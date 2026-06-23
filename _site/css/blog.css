@@ -468,7 +468,45 @@ blockquote {
   text-decoration: underline;
 }
 
+/* ================================
+   SHARE LINKS
+================================ */
+.post-share {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px dashed var(--line);
+}
 
+.share-heading {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.share-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.share-link {
+  display: inline-block;
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share-link:hover {
+  background: var(--green);
+  color: black;
+}
 /* ================================
    RESPONSIVE
 ================================ */
