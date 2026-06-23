@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wabsworld",
+  "compatibility_date": "2026-06-23",
+  "assets": {
+    "directory": "_site"
+  }
+}
