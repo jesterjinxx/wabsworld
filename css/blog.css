@@ -401,7 +401,38 @@ blockquote {
   line-height: 1.8;
   font-size: 1.15rem;
 }
+/* ================================
+   TRANSITION CARD
+================================ */
+.transition-card {
+  margin: 2rem 0 3rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid #6cff8f;
+  background:
+    linear-gradient(135deg, rgba(108, 255, 143, 0.08), transparent 50%),
+    rgba(10, 18, 13, 0.72);
+  box-shadow: 0 0 24px rgba(108, 255, 143, 0.08);
+  position: relative;
+}
 
+.transition-card::before {
+  content: "++ + +";
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  color: rgba(108, 255, 143, 0.32);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  pointer-events: none;
+}
+
+.transition-card p {
+  margin: 0;
+  max-width: 760px;
+  font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  line-height: 1.65;
+}
 
 /* ================================
    AUTHOR CARD

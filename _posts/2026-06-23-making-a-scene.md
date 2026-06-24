@@ -40,12 +40,13 @@ That felt worth paying attention to.
 <figure class="post-media">
   <img src="/images/cobeshow-1.jpg" alt="Coberino performing a DJ set">
 </figure>
-<h3>
+<section class="transition-card">
+<p>
 The jump from living room mixing to rooftop crowds was quick, but this isn't where music began for Cobe.
 During a phone call squeezed between meetings, Cobe and I talked festivals, boat parties, dance culture, and
 why he decided to get behind the decks.
-</h3>
-
+</p>
+</section>
 <h2 class="interview-heading">The Interview</h2>
 
 <span class="interviewer">WabsWorld</span>
