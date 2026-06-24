@@ -11,11 +11,6 @@ thumbnail: /images/background.png
 excerpt: "Why I built this platform"
 ---
 
-<div class="tags">
-  {% for tag in page.tags %}
-    <span class="tag">{{ tag }}</span>
-  {% endfor %}
-</div>
 
 ## Why I made WabsWorld, and what I want it to be.
 
