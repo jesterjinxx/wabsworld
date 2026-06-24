@@ -31,12 +31,6 @@ I needed it to feel like a reason to create, a brand of my own that felt like a 
         The reality I have found today is that I use whatever medium feels right for a project, I love 
         incorporating all my different ideas and interests into my work, and I have found that the more I create,
         the more I know what I want to create.
-<figure class="post-media">
-  <img src="/media/image-one.jpg" alt="Describe the image here">
-  <figcaption>
-    Optional caption for the photo.
-  </figcaption>
-</figure>
 
 ## The Future
 
@@ -60,19 +54,6 @@ Wabsworld is now a website, a journal, a project archive, and a place to share m
         where I can document my creative journey, and where I can connect with others who are interested in similar things. 
 
 +++
-
-<figure class="post-gallery">
-  <figure>
-    <img src="/media/gallery-image-one.jpg" alt="Describe image one">
-    <figcaption>Caption one.</figcaption>
-  </figure>
-
-  <figure>
-    <img src="/media/gallery-image-two.jpg" alt="Describe image two">
-    <figcaption>Caption two.</figcaption>
-  </figure>
-</figure>
-
 
 <section class="author-card">
   <img src="/images/contour.jpg" alt="Portrait of Wab" class="author-photo">
