@@ -3,41 +3,94 @@ layout: default
 title: WabsWorld
 ---
 
-<main class="page-shell">
-  <section class="hero">
-    <p class="eyebrow">Status: Active</p>
+<main class="page-shell home-shell">
 
-    <h1>Welcome to WabsWorld.</h1>
+  <section class="home-hero home-panel">
+    <div class="home-hero-main">
+      <p class="eyebrow">A digital journal by wab</p>
 
-    <p>
-      A messy little corner of the internet for projects, notes, photos,
-      experiments, thoughts, and whatever else feels worth saving.
-    </p>
+      <h1>Welcome to WabsWorld.</h1>
+
+      <p>
+        A place for the things I’m making, noticing, documenting, and figuring out.
+      </p>
+
+      <div class="home-actions">
+        <a href="/blog.html" class="home-button">Read the Blog</a>
+        <a href="/projects.html" class="home-button home-button-secondary">View Projects</a>
+      </div>
+    </div>
+
+    <aside class="home-note">
+  <p class="note-label">Freeform archive:</p>
+
+  <p>
+    Not everything here is finished. Some of it is documentation, some of it is practice, some of it is just a piece I wanted to keep where I could find it again.
+  </p>
+</aside>
   </section>
 
-  <section class="post-list">
-    <h2>Latest Posts</h2>
+  {% assign featured_post = site.posts | first %}
 
-    {% for post in site.posts limit:3 %}
-      <article class="post-card">
-        {% if post.thumbnail %}
-          <a class="post-thumb" href="{{ post.url }}">
-            <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
-          </a>
-        {% endif %}
+  {% if featured_post %}
+    <section class="home-featured home-panel">
+      {% if featured_post.thumbnail %}
+        <a class="home-featured-image" href="{{ featured_post.url }}">
+          <img src="{{ featured_post.thumbnail }}" alt="{{ featured_post.title }}">
+        </a>
+      {% endif %}
 
-        <div class="post-card-content">
-          <p class="post-meta">
-            {{ post.date | date: "%B %-d, %Y" }} · {{ post.category }}
-          </p>
+      <div class="home-featured-content">
+        <p class="eyebrow">Latest Post</p>
 
-          <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </h3>
+        <p class="post-meta">
+          {{ featured_post.date | date: "%B %-d, %Y" }} · {{ featured_post.category }}
+        </p>
 
-          <p>{{ post.excerpt }}</p>
-        </div>
-      </article>
-    {% endfor %}
+        <h2>
+          <a href="{{ featured_post.url }}">{{ featured_post.title }}</a>
+        </h2>
+
+        <p>
+          {{ featured_post.excerpt | strip_html | truncate: 180 }}
+        </p>
+
+        <a class="read-link" href="{{ featured_post.url }}">Enter Post →</a>
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="home-recent">
+    <div class="home-section-heading">
+      <h2>Recent Artifacts</h2>
+      <a href="/blog.html">All Posts →</a>
+    </div>
+
+    <div class="home-card-grid">
+      {% for post in site.posts offset:1 limit:2 %}
+        <article class="home-mini-card">
+          {% if post.thumbnail %}
+            <a class="home-mini-thumb" href="{{ post.url }}">
+              <img src="{{ post.thumbnail }}" alt="{{ post.title }}">
+            </a>
+          {% endif %}
+
+          <div>
+            <p class="post-meta">
+              {{ post.date | date: "%B %-d, %Y" }} · {{ post.category }}
+            </p>
+
+            <h3>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+
+            <p>
+              {{ post.excerpt | strip_html | truncate: 110 }}
+            </p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
   </section>
+
 </main>
