@@ -36,6 +36,8 @@ I like to consider this particular camera my first Polaroid, a fated purchase at
 
 It’s a One-Step 600, in perfect condition other than a silver sharpie inscription of “S. KAPLAN” on the bottom. Maybe the booth seller, maybe the original owner… same person? An aesthetically pleasing nod to the ambiguous history of my hunk of durable plastic, nonetheless. 
 
+> “An aesthetically pleasing nod to the ambiguous history of my hunk of durable plastic.”
+
 <figure class="post-media">
   <img src="/images/polaroid10.jpg" alt="A polaroid image">
   <figcaption>
@@ -58,6 +60,8 @@ I tried my hand at film photography in the past, via another iconic camera: a Pe
 
 Today, as a Sony A7iii-using “film imitator,” I have always wanted to capture grain and lightleaks, other natural imperfections of a moment. I have shied away from overediting my images in the past, dimming my own light and ideas to fit the crispy clear norm of high end mirrorless photography professionals. Today I have rejected these methods entirely in my editing room. My personally created lightroom presets turn everything blue, or extremely overexposed and blurry, or a warm dark brown, one I made called “Hardcore” turns everything black and white and pushes every limit of every slider, turning it almost into a contour image. It took a lot of rewiring to make things how I like them rather than how others do.  
 
+> “It took a lot of rewiring to make things how I like them rather than how others do.”
+
 <figure class="post-media">
   <img src="/images/polaroid4.jpg" alt="A polaroid image">
   <figcaption>
@@ -66,6 +70,8 @@ Today, as a Sony A7iii-using “film imitator,” I have always wanted to captur
 </figure>
 
 My new old camera is special to me, the colors look gorgeous, the contrast is stark and smooth. Every image feels warm without it having to come out yellow. People blur into the background and become a more integral part of the scenery, or stand out boldly with a bright flash ejecting them into the foreground. Each image becomes a delicate reminder to be intentional with my shots, forcing better communication with models, and quick thinking while candid shooting. 
+
+> “Each image becomes a delicate reminder to be intentional with my shots.”
 
 <figure class="post-media">
   <img src="/images/polaroid3.jpg" alt="A polaroid image">
