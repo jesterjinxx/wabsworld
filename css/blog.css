@@ -260,8 +260,13 @@ blockquote {
 }
 
 .post-media img {
-  max-height: 520px;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  margin-inline: auto;
+
+  object-fit: contain;
   object-position: center;
 }
 
@@ -343,7 +348,7 @@ blockquote {
   margin-top: 0.5rem;
 
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
@@ -586,9 +591,7 @@ blockquote {
     margin: 2rem 0;
   }
 
-  .post-media img {
-    max-height: 380px;
-  }
+ 
 
   .post-gallery {
     grid-template-columns: 1fr;
@@ -971,4 +974,28 @@ blockquote {
     width: 100%;
     text-align: center;
   }
+}
+
+/* Fix portrait images inside blog posts */
+.post-media img,
+.post-media-featured img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+}
+/* FINAL OVERRIDE: natural gallery image sizing */
+.post-gallery {
+  align-items: start;
+}
+
+.post-gallery img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
 }
